@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets';
+import osmuLogo from "../assets/osmu-logo.svg"
+import heroImage from "../assets/BitaxeRenderAndSchematic.png"
+import "../tailwind.css"
+import Head from '@astrojs/starlight/components/Head.astro';
+---
+
+<Head entry={{ // dummy data to satisfy zod
+    data: {
+        title: "Open Source Miners United",
+        editUrl: "",
+        head: [],
+        pagefind: false,
+        sidebar: { hidden: true, attrs: {}},
+        template: "splash"
+    }
+}}/>
+
+<main class="font-osmu flex flex-col">
+    <div class="flex items-center justify-between p-3">
+        <Image src={osmuLogo} alt="OSMU Logo" class="w-44"/>
+        <button class="text-base py-1 px-5 bg-white font-osmu font-bold text-osmu-purple border-2 border-osmu-purple rounded-lg">
+            Support Us
+        </button>
+    </div>
+    <Image src={heroImage} alt="A render of the Bitaxe and its schematic behind it." class="w-full h-auto object-contain" />
+    <a href="/osmu/about">zum wiki</a>
+</main>

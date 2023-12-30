@@ -1,0 +1,21 @@
+---
+import { Icon } from "@astrojs/starlight/components";
+import { Icons } from "@astrojs/starlight/components/Icons";
+
+interface Props {
+	icon: keyof typeof Icons;
+    href: string
+    label: string
+}
+
+const props = Astro.props
+---
+
+<a 
+    href={ props.href } target="_blank"
+    class="flex items-center gap-1.5 border border-gray-500 rounded-full py-1 pl-2 pr-3 text-black dark:text-white no-underline font-bold text-sm"
+>
+    <Icon name={ props.icon }></Icon>
+    <div class="self-stretch w-px bg-gray-500 my-0.5"></div>
+    { props.label }
+</a>

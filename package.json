@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
@@ -13,10 +13,15 @@
     "@astrojs/check": "^0.3.3",
     "@astrojs/starlight": "^0.15.1",
     "@astrojs/starlight-tailwind": "^2.0.1",
+    "@astrojs/svelte": "^5.0.2",
     "@astrojs/tailwind": "^5.0.3",
     "astro": "^4.0.1",
     "sharp": "^0.32.5",
+    "svelte": "^4.2.8",
     "tailwindcss": "^3.3.7",
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "astro-icon": "^0.8.2"
   }
 }

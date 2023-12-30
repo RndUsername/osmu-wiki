@@ -9,7 +9,14 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
-			colors: { accent, gray },
+			colors: { 
+				accent, 
+				gray,
+				"osmu-purple": "#6A59A3"
+			},
+			fontFamily: {
+				"osmu": ["Montserrat"]
+			}
 		},
 	},
 	plugins: [starlightPlugin()],
