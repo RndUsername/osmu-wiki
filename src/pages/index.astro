@@ -1,9 +1,25 @@
 ---
+import links from "../../links"
 import { Image } from 'astro:assets';
 import osmuLogo from "../assets/osmu-logo.svg"
-import heroImage from "../assets/BitaxeRenderAndSchematic.png"
+import heroImage from "../assets/bitaxe-render-and-schematic.png"
+import padlock from "../assets/padlock.svg"
+import bitcoinHead from "../assets/bitcoin-head.svg"
+import communityBubbles from "../assets/community-bubbles.png"
 import "../tailwind.css"
+import { Icon } from '@astrojs/starlight/components';
+import ArgumentSection from "../components/homepage/ArgumentSection.astro"
 ---
+
+<style>
+    body{
+        margin: 0;
+    }
+
+    a{
+        color: currentColor;
+    }
+</style>
 
 <head>
     <meta charset="UTF-8">
@@ -12,14 +28,44 @@ import "../tailwind.css"
     <link rel="icon" href="favicon.svg" type="image/svg">
 </head>
 
-
-<main class="font-osmu flex flex-col">
-    <div class="flex items-center justify-between p-3">
-        <Image src={osmuLogo} alt="OSMU Logo" class="w-44"/>
-        <button class="text-base py-1 px-5 bg-white font-osmu font-bold text-osmu-purple border-2 border-osmu-purple rounded-lg">
-            Support Us
-        </button>
-    </div>
-    <Image src={heroImage} alt="A render of the Bitaxe and its schematic behind it." class="w-full h-auto object-contain" />
-    <a href="/osmu/about">zum wiki</a>
+<header class="flex items-center justify-between p-4">
+    <Image src={osmuLogo} alt="OSMU Logo" class="w-44"/>
+    <a href={links.donation} target="_blank" class="text-base py-1 px-5 bg-white font-osmu font-bold text-osmu-purple border-2 border-osmu-purple rounded-lg">
+        Support Us
+    </a>
+</header>
+<main class="font-osmu flex flex-col text-base">
+    <Image 
+        src={heroImage} alt="A render of the Bitaxe and its schematic behind it." 
+        class="w-full h-auto object-contain -mb-16"
+    />
+    <section class="text-white bg-osmu-purple py-10 px-10 text-center flex flex-col items-center gap-10">
+        <h1 class="m-0 text-4xl">The origin of every big open source mining project.</h1>
+        <a href="/osmu/about" class="text-osmu-purple no-underline font-bold bg-white py-2 px-5 rounded-lg text-lg flex items-center">
+            Browse the Wiki
+            <Icon name='right-caret'/>
+        </a>
+        <span>
+            At OSMU, everyone with an interest in bitcoin and mining, comes together to share their knowledge, expertise or time. It’s the spot for finding the information you need or the friends you want. Come and join us at our <a href={links.discordInvite}>Discord server</a>.
+        </span>
+    </section>
+    <section class="m-10 flex flex-col gap-20">
+        <ArgumentSection title='open' image={{ src: padlock, alt: "A padlock whose shackle is broken."}}>
+            Everyone can contribute and every contribution profits everyone.
+        </ArgumentSection>
+        <ArgumentSection title='brainy' image={{ src: bitcoinHead, alt: "A padlock whose shackle is broken."}} flip>
+            Gathering people and everything they know at one spot makes OSMU the ultimate library of skill and knowledge.
+        </ArgumentSection>
+        <ArgumentSection title='together' image={{ src: communityBubbles, alt: "A padlock whose shackle is broken."}}>
+            Find like-minded people or learn from new friends.
+        </ArgumentSection>
+    </section>
 </main>
+<footer class="bg-osmu-purple text-white font-osmu p-5 text-base flex flex-col gap-3">
+    <ul class="list-none flex justify-start w-full gap-3 m-0 p-0">
+        <li><a href="/osmu/about" >wiki</a></li>
+        <li><a href={links.discordInvite} target="_blank">discord</a></li>
+        <li><a href={links.donation} target="_blank">donation</a></li>
+    </ul>
+    <cite class="font-mono text-gray-300 text-sm">Closed Source is Antithetical to Bitcoin</cite>
+</footer>

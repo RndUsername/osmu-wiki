@@ -3,6 +3,7 @@ import starlight from "@astrojs/starlight";
 import tailwind from "@astrojs/tailwind";
 
 import svelte from "@astrojs/svelte";
+import links from "./links"
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,10 +13,10 @@ export default defineConfig({
       src: "./src/assets/osmu-logo.svg"
     },
     social: {
-      discord: "https://discord.gg/F2rmBJXytn"
+      discord: links.discordInvite
     },
     editLink: {
-      baseUrl: 'https://github.com/RndUsername/omsu-website/edit/master'
+      baseUrl: links.gitEditBase
     },
     sidebar: [{
       label: "OSMU",

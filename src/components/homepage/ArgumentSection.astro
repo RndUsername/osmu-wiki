@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+    title: string
+    image: {
+        src: any
+        alt: string
+    }
+    flip?: boolean
+}
+
+const { title, image, flip } = Astro.props as Props
+
+const imageClass = "w-32 h-auto"
+---
+
+<articel class="flex flex-col gap-5 text-lg">
+    <div class="flex items-center justify-between mx-5">
+        { flip && <Image {...image} class={imageClass}/> }
+        <h2 class="text-osmu-purple text-4xl">{title}</h2>
+        { !flip && <Image {...image} class={imageClass}/> }
+    </div>
+    <slot/>
+</articel>
