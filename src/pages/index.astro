@@ -3,19 +3,14 @@ import { Image } from 'astro:assets';
 import osmuLogo from "../assets/osmu-logo.svg"
 import heroImage from "../assets/BitaxeRenderAndSchematic.png"
 import "../tailwind.css"
-import Head from '@astrojs/starlight/components/Head.astro';
 ---
 
-<Head entry={{ // dummy data to satisfy zod
-    data: {
-        title: "Open Source Miners United",
-        editUrl: "",
-        head: [],
-        pagefind: false,
-        sidebar: { hidden: true, attrs: {}},
-        template: "splash"
-    }
-}}/>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source Miners United</title>
+    <link rel="icon" href="favicon.svg" type="image/svg">
+</head>
 
 
 <main class="font-osmu flex flex-col">

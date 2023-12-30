@@ -1,9 +1,8 @@
 ---
 import { Icon } from "@astrojs/starlight/components";
-import { Icons } from "@astrojs/starlight/components/Icons";
 
 interface Props {
-	icon: keyof typeof Icons;
+	icon: Parameters<typeof Icon>[0]["name"];
     href: string
     label: string
 }
