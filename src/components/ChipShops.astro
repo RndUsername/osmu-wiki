@@ -26,7 +26,7 @@ const shops = Astro.props.shops.map(shop => ({
 
 <label
     for="show-shops"
-    class="grid grid-cols-[auto_auto_1fr_auto] items-center border border-gray-500 rounded-2xl py-1 pl-2 pr-3 text-black dark:text-white no-underline text-sm cursor-pointer"
+    class="grid grid-cols-[auto_auto_1fr_auto] items-center border border-gray-500 rounded-2xl py-1 pl-2 pr-3 text-gray-500 dark:text-gray-300 hover:text-black hover:dark:text-white no-underline text-sm cursor-pointer transition-colors"
 >
     <input type="checkbox" id="show-shops" class="peer hidden">
     <Iconify name="fluent:cart-16-filled" class="w-[1em]"/>
@@ -38,13 +38,13 @@ const shops = Astro.props.shops.map(shop => ({
             shops.map(shop => (
                 <a 
                     href={shop.link} target="_blank"
-                    class="text-white no-underline hover:font-bold flex gap-1 items-center w-max"
+                    class="text-black dark:text-white no-underline hover:font-bold flex gap-1 items-center w-max"
                 >
                     { shop.flagEmoji }
                     { shop.name }
                     {
                         shop.official &&
-                        <div class="text-xs bg-blue-400 rounded-full px-2 font-bold">
+                        <div class="text-xs bg-blue-400 dark:text-black text-white rounded-full px-2 font-bold">
                             official
                         </div>
                     }
