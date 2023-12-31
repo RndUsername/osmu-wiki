@@ -11,15 +11,12 @@ interface Props {
 }
 
 const { title, image, flip } = Astro.props as Props
-
-const imageClass = "w-32 h-auto"
 ---
 
-<articel class="flex flex-col gap-5 text-lg">
-    <div class="flex items-center justify-between mx-5">
-        { flip && <Image {...image} class={imageClass}/> }
-        <h2 class="text-osmu-purple text-4xl">{title}</h2>
-        { !flip && <Image {...image} class={imageClass}/> }
-    </div>
-    <slot/>
-</articel>
+<article class="grid grid-cols-2 grid-rows-[1fr_auto] md:grid-rows-2 gap-5 text-lg items-center">
+    <h2 class="text-osmu-purple text-4xl row-start-1 mx-5 md:self-end md:m-0" class:list={{"col-start-2 justify-self-end": flip}}>{title}</h2>
+    <Image {...image} class="w-32 md:w-52 h-auto row-start-1 mx-5 md:mx-0 md:row-span-2" class:list={{"justify-self-end": !flip}}/>
+    <span class="col-span-2 md:col-span-1 md:self-start" class:list={{"md:text-right": flip}}>
+        <slot/>
+    </span>
+</article>
