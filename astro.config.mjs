@@ -31,7 +31,7 @@ export default defineConfig({
         label: "Overview",
         link: "/bitaxe/about"
         }, {
-          label: "100",
+          label: "100 / Max",
           link: "/bitaxe/100"
         }, {
           label: "200 / Ultra",
