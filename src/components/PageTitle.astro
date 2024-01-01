@@ -2,11 +2,12 @@
 import type { Props } from '@astrojs/starlight/props';
 import ChipLink from './ChipLink.astro';
 import ChipShops from './ChipShops.astro';
+import { Image } from 'astro:assets';
 
-const { discordChannel, githubRepo, shops }  = Astro.props.entry.data
+const { discordChannel, githubRepo, shops, logo }  = Astro.props.entry.data
 ---
 
-<div class="flex  flex-col sm:flex-row gap-3">
+<div class="relative flex flex-col sm:flex-row gap-3">
     <h1 id="_top">{Astro.props.entry.data.title}</h1>
     <div class="sm:ml-auto flex flex-wrap gap-2 sm:flex-col">
         {
@@ -22,6 +23,9 @@ const { discordChannel, githubRepo, shops }  = Astro.props.entry.data
             <ChipShops shops={ shops }/>
         }
     </div>
+    { logo && 
+        <Image src={logo} alt="The Logo of the project." class="invert opacity-5 absolute top-10 right-2 w-80 h-auto rotate-[20deg] dark:invert-0 -z-10 pointer-events-none"/>
+    }
 </div>
 
 <style>

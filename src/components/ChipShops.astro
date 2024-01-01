@@ -6,21 +6,24 @@ interface Props {
 	shops: {
         name: string
         link: string
-        region?: keyof typeof regionFlagEmojiMapping
+        region?: string
         official?: boolean
     }[]
 }
 
-const regionFlagEmojiMapping = {
-    US: "🇺🇸",
-    EU: "🇪🇺",
-    CA: "🇨🇦",
-    NONE: ""
+const getFlagEmoji = (countryCode?: string) => {
+    if(countryCode === undefined) return ""
+
+    const codePoints = countryCode
+        .toUpperCase()
+        .split('')
+        .map(char =>  127397 + char.charCodeAt(0));
+    return String.fromCodePoint(...codePoints);
 }
 
 const shops = Astro.props.shops.map(shop => ({
     ...shop, 
-    flagEmoji: regionFlagEmojiMapping[shop.region ?? "NONE"]
+    flagEmoji: getFlagEmoji(shop.region)
 }))
 ---
 
