@@ -2,7 +2,7 @@
 const links = {
     discordInvite: "https://discord.gg/F2rmBJXytn",
     donation: "https://discord.com/channels/1091348375301013615/shop",
-    gitEditBase: "https://github.com/RndUsername/omsu-website/edit/master"
+    gitEditBase: "https://github.com/RndUsername/osmu-wiki/edit/master"
 }
 
 export default links

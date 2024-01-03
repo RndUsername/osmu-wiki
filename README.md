@@ -1,54 +1,85 @@
-# Starlight Starter Kit: Basics
+# OSMU Wiki
+This project is the source code of the [osmu.wiki](https://osmu.wiki) page.
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+The wiki is meant as a place to store all information about projects, which are affiliated to OSMU. It makes the projects searchable and more accessible. Any participation is welcome!
 
-```
-npm create astro@latest -- --template starlight
-```
+## How to Contribute?
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
+The wiki is built with the [Starlight](https://starlight.astro.build) template on top of [Astro](https://astro.build). That's why it's a good idea to first read through the ["Authoring Content"](https://starlight.astro.build/guides/authoring-content/) section of Starlight. Please read it thoroughly and completely before moving on.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Edit existing pages
+At the bottom of every page, you will find an "Edit page" button. It will take you to GitHub where you can edit the chosen page. If you are wondering about the stuff between the `---` at the top, this is explained in the [lower section](#custom_frontmatter)
 
-## 🚀 Project Structure
+### Add new pages
+New content is added to the `src/content/docs` folder. As a convention, every project has its own folder which always has an `about.md` page. 
+Every page starts with the [frontmatter](#custom_frontmatter) with at least the `title` value set.
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+To make the page visible in the navigation sidebar you need to edit `astro.config.mjs`. Add another object inside the `sidebar` array:
+```mjs
+export default defineConfig({
+    integrations: [starlight({
+        sidebar: [{
+            label: "Example", // displayed in sidebar as drop-down
+            items: [
+                {
+                    label: "About", // displayed in sidebar as page
+                    link: "/example/about" // folder path / url to page
+                }, {
+                    label: "Another Thing", // add more objects for multiple pages
+                    link: "/example/another"
+                }
+            ]
+        }]
+    })]
+})
 
-```
+/* asumed folder structure:
 .
-├── public/
 ├── src/
-│   ├── assets/
 │   ├── content/
 │   │   ├── docs/
-│   │   └── config.ts
-│   └── env.d.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+│   │   │   ├── example/
+│   │   │   │   ├── about.md
+│   │   │   │   └── another.md
+*/
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+## Custom Frontmatter
+Through frontmatter, you can add common info, which is automatically rendered. Here is an example with all properties, that are already available:
+```yaml
+# example.md
+---
+title: Example Title # displayed as <h1/> header
+logo: ./example-logo.svg # should be an all-white svg with transparent background of the projects logo
+discordChannel: https://discord.gg/e1x2a3m4p5l6e7 # link to actual channel on the osmu discord server
+githubRepo: https://github.com/ex/ample # GitHub repository of the project
+shops: # list of shops, where you can buy products of the project
+    - name: ExampleShop
+      link: https://example.com/
+      official: true # displays a little 'official' badge next to the shop when set to true
+      region: US # countrycode of shop after wikipedia.org/wiki/ISO_3166-1#Codes
+    - name: european ExampleShop
+      link: https://europe-example.com/
+      region: EU
+      # you can omit 'official: true' instead of writing 'official: false'
+---
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+Here begins the the normal content of the page!
+```
 
-Static assets, like favicons, can be placed in the `public/` directory.
+## Developing
+If you want to develop the wiki locally, you need [Node.js](https://nodejs.org/en/download/current) installed. Then at the root of the project run
+```
+npm install
+```
+in your terminal. With
+```
+npm run dev
+```
+you can start the local dev server at `localhost:4321`. Before you push, always run
+```
+npm run build
+```
+beforehand to check for any build errors.
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+If your commit gets to be on the master branch, it will be automatically deployed through [Vercel](https://vercel.com).
