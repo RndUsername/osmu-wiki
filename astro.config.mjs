@@ -4,8 +4,6 @@ import tailwind from "@astrojs/tailwind";
 import svelte from "@astrojs/svelte";
 import links from "./links";
 
-import vercel from "@astrojs/vercel/static";
-
 // https://astro.build/config
 export default defineConfig({
   integrations: [starlight({
@@ -94,13 +92,4 @@ export default defineConfig({
     // Disable the default base styles:
     applyBaseStyles: false
   }), svelte()],
-  output: "static",
-  adapter: vercel({
-    speedInsights: {
-      enabled: true,
-    },
-    webAnalytics: {
-      enabled: true,
-    },
-  })
 });
