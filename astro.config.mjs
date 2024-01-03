@@ -1,11 +1,10 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import tailwind from "@astrojs/tailwind";
-
 import svelte from "@astrojs/svelte";
-import links from "./links"
+import links from "./links";
 
-import vercel from '@astrojs/vercel/serverless';
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
@@ -28,21 +27,19 @@ export default defineConfig({
       }]
     }, {
       label: "Bitaxe",
-      items: [
-        {
+      items: [{
         label: "Overview",
         link: "/bitaxe/about"
-        }, {
-          label: "100 / Max",
-          link: "/bitaxe/100"
-        }, {
-          label: "200 / Ultra",
-          link: "/bitaxe/200"
-        }, {
-          label: "300 / Hex",
-          link: "/bitaxe/300"
-        }
-      ]
+      }, {
+        label: "100 / Max",
+        link: "/bitaxe/100"
+      }, {
+        label: "200 / Ultra",
+        link: "/bitaxe/200"
+      }, {
+        label: "300 / Hex",
+        link: "/bitaxe/300"
+      }]
     }, {
       label: "Nerdminer",
       items: [{
@@ -96,11 +93,11 @@ export default defineConfig({
   }), tailwind({
     // Disable the default base styles:
     applyBaseStyles: false
-  }), svelte()]
-  output: 'server',
+  }), svelte()],
+  output: "server",
   adapter: vercel({
     webAnalytics: {
       enabled: true,
     },
-  }),
+  })
 });
