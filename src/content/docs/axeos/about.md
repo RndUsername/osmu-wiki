@@ -1,8 +1,10 @@
 ---
-title: About AxeOS
+title: About AxeOS (ESP-Miner)
 discordChannel: https://discord.com/channels/1091348375301013615/1094385611718270977
 githubRepo: https://github.com/skot/ESP-Miner
 ---
-🚧 **This page is not written yet.** 🚧
+AxeOS is the software that powers every [BitAxe](/bitaxe/about) so far. It instructs the ESP microcontroller inside the BitAxe how to speak to its mining ASIC and it hosts a Configuration-UI right on the BitAxe itself. This makes it possible to control and monitor your BitAxe through a Webbrowser.
 
-Help us to complete the wiki by using the "Edit page" button below 👇
+This firmware is designed to run on a BitAxe v2+
+
+![Web UI of AxeOS](./axeos-web-ui.png)

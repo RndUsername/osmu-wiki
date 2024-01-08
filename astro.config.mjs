@@ -55,6 +55,12 @@ export default defineConfig({
       items: [{
         label: "Overview",
         link: "/axeos/about"
+      },{
+        label: "Install onto BitAxe",
+        link: "/axeos/install-onto-bitaxe"
+      },{
+        label: "Build from Source",
+        link: "/axeos/compile"
       }]
     }, {
       label: "Bitcrane",
@@ -75,6 +81,15 @@ export default defineConfig({
         link: "/antsniffer/about"
       }]
     }, {
+      label: "OSMU Lab",
+      items: [{
+        label: "Overview",
+        link: "/osmu-lab/about"
+      }, {
+        label: "BM1397",
+        link: "/osmu-lab/bm1397"
+      }]
+    },{
       label: "Tips & Tricks",
       items: [{
         label: "Building PCBs",

@@ -1,5 +1,5 @@
 ---
-title: About the Bitaxe
+title: About the BitAxe
 logo: ./bitaxe-logo.svg
 discordChannel: https://discord.gg/VxNqpPzCYW
 githubRepo: https://github.com/skot/bitaxe
@@ -29,7 +29,6 @@ shops:
       region: US
     
 ---
-
-🚧 **This page is not written yet.** 🚧
-
-Help us to complete the wiki by using the "Edit page" button below 👇
+:::caution[This page is not written yet.]
+Help us to complete the wiki by using the "Edit page" button at the end of the page 👇
+:::
