@@ -23,26 +23,38 @@ const getFlagEmoji = (countryCode?: string) => {
 
 const shops = Astro.props.shops.map(shop => ({
     ...shop, 
-    flagEmoji: getFlagEmoji(shop.region)
+    flagEmoji: getFlagEmoji(shop.region),
+    ariaLabel: 
+        [shop.name, shop.official ? "official OSMU vendor" : undefined, "Region: " + shop.region]
+        .filter(l => l !== undefined)
+        .join(" | ")
 }))
+
 ---
+<script>
+    import { polyfillCountryFlagEmojis } from "country-flag-emoji-polyfill";
+    polyfillCountryFlagEmojis();
+</script>
+
+<style>
+    label {
+        font-family: "Twemoji Country Flags", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+    }
+</style>
 
 <label
-    for="show-shops"
+    for="show-shops" aria-label="Shops"
     class="grid grid-cols-[auto_auto_1fr_auto] items-center border border-gray-500 rounded-2xl py-1 pl-2 pr-3 text-gray-500 dark:text-gray-300 hover:text-black hover:dark:text-white no-underline text-sm cursor-pointer transition-colors"
 >
-    <input type="checkbox" id="show-shops" class="peer hidden">
+    <input type="checkbox" id="show-shops" class="peer hidden" aria-hidden="true">
     <Iconify name="fluent:cart-16-filled" class="w-[1em]"/>
     <div class="self-stretch w-px bg-gray-500 my-0.5 mx-1.5"></div>
     <span class="font-bold">Shops</span>
     <Icon name='down-caret' class='ml-1.5 peer-checked:rotate-180 transition-transform'/>
-    <div class="col-start-3 grid max-w-0 max-h-0 peer-checked:max-w-[100vw] peer-checked:max-h-screen transition-all overflow-hidden">
-        {
-            shops.map(shop => (
-                <a 
-                    href={shop.link} target="_blank"
-                    class="text-black dark:text-white no-underline hover:font-bold flex gap-1 items-center w-max"
-                >
+    <ul class="col-start-3 grid max-w-0 max-h-0 peer-checked:max-w-[100vw] peer-checked:max-h-screen transition-all overflow-hidden list-none p-0">
+        {shops.map(shop => (
+            <li class=" hover:font-bold" aria-label={shop.ariaLabel}>
+                <a href={shop.link} target="_blank" class="text-black dark:text-white no-underline flex gap-1 items-center ">
                     { shop.flagEmoji }
                     { shop.name }
                     {
@@ -52,7 +64,7 @@ const shops = Astro.props.shops.map(shop => ({
                         </div>
                     }
                 </a>
-            ))
-        }
-    </div>
+            </li>
+        ))}
+    </ul>
 </label>
