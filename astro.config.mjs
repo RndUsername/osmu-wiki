@@ -7,7 +7,7 @@ import links from "./links";
 // https://astro.build/config
 export default defineConfig({
   integrations: [starlight({
-    title: "WIKI",
+    title: "Wiki",
     logo: {
       src: "./src/assets/osmu-logo.svg"
     },

@@ -83,3 +83,7 @@ npm run build
 beforehand to check for any build errors.
 
 If your commit gets to be on the master branch, it will be automatically deployed through [Vercel](https://vercel.com).
+
+## Resources
+- you can find the Figma Design Files [here](https://www.figma.com/community/file/1327223930083607761/osmu-website)
+- this project was made with [Starlight](https://starlight.astro.build)
