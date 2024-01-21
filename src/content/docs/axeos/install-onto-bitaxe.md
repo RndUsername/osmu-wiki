@@ -156,10 +156,3 @@ Hash of data verified.
 Leaving...
 Hard resetting via RTS pin...
 ```
-
-
-
-
-
-
-
