@@ -8,11 +8,11 @@ The wiki is meant as a place to store all information about projects, which are 
 The wiki is built with the [Starlight](https://starlight.astro.build) template on top of [Astro](https://astro.build). That's why it's a good idea to first read through the ["Authoring Content"](https://starlight.astro.build/guides/authoring-content/) section of Starlight. Please read it thoroughly and completely before moving on.
 
 ### Edit existing pages
-At the bottom of every page, you will find an "Edit page" button. It will take you to GitHub where you can edit the chosen page. If you are wondering about the stuff between the `---` at the top, this is explained in the [lower section](#custom_frontmatter)
+At the bottom of every page, you will find an "Edit page" button. It will take you to GitHub where you can edit the chosen page. If you are wondering about the stuff between the `---` at the top, this is explained in the [lower section](#custom-frontmatter)
 
 ### Add new pages
 New content is added to the `src/content/docs` folder. As a convention, every project has its own folder which always has an `about.md` page. 
-Every page starts with the [frontmatter](#custom_frontmatter) with at least the `title` value set.
+Every page starts with the [frontmatter](#custom-frontmatter) with at least the `title` value set.
 
 To make the page visible in the navigation sidebar you need to edit `astro.config.mjs`. Add another object inside the `sidebar` array:
 ```mjs
