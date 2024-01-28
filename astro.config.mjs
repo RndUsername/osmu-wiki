@@ -73,6 +73,12 @@ export default defineConfig({
       items: [{
         label: "Overview",
         link: "/piaxe/about"
+      }, {
+        label: "Assemble Piaxe",
+        link: "/piaxe/assembly"
+      }, {
+        label: "Building Piaxe",
+        link: "/piaxe/building"
       }]
     }, {
       label: "Antsniffer",
