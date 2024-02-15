@@ -5,6 +5,8 @@ discordChannel: https://discord.com/channels/1091348375301013615/116707483218635
 githubRepo: https://github.com/shufps/qaxe
 ---
 
+![Qaxe](./qaxe.jpg)
+
 Qaxe is a quad-BM1366 Miner based on the [PiAxe](https://github.com/shufps/piaxe) and [BitAxe](https://github.com/skot/bitaxe/tree/ultra-v1.3).
 
 The Qaxe is an innovative quad-BM1366 miner, deriving its design from the PiAxe and BitAxe projects. It represents a significant step forward in ASIC Bitcoin mining technology, offering enhanced performance and efficiency. Here's a brief overview based on the information available on its GitHub repository:

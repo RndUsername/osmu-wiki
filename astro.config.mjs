@@ -117,6 +117,14 @@ export default defineConfig({
               label: "Overview",
               link: "/qaxe/about",
             },
+            {
+              label: "Assembly",
+              link: "/qaxe/assembly",
+            },
+            {
+              label: "Installation",
+              link: "/qaxe/installation",
+            },
           ],
         },
         {
