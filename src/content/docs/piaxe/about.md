@@ -1,11 +1,11 @@
 ---
 title: About Piaxe
-logo: ./PiAxe.png
+logo: ./PiAxeLogo.svg
 discordChannel: https://discord.com/channels/1091348375301013615/1167074832186355752
 githubRepo: https://github.com/shufps/piaxe
 ---
-
 The PiAxe is a Raspberry Pi mining HAT that is designed to be used with the PiAxe Miner software.
+![PiAxe](./PiAxe.png)
 
 ## What is this?
 

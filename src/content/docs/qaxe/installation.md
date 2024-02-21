@@ -1,6 +1,6 @@
 ---
 title: QAxe Installtion
-logo: ./qaxe.jpg
+logo: ./QaxeLogo.svg
 ---
 
 :::caution[This page is not finally written yet.]
