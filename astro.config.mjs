@@ -47,6 +47,10 @@ export default defineConfig({
               label: "300 / Hex",
               link: "/bitaxe/300",
             },
+            {
+              label: "400 / Supra",
+              link: "/bitaxe/400",
+            },
           ],
         },
         {
