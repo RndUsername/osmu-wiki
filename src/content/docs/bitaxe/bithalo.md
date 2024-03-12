@@ -1,5 +1,5 @@
 ---
-title: "Bithalo"
+title: "BitHalo"
 logo: ./bitaxe-logo.svg
 discordChannel: https://discord.com/channels/1091348375301013615/1131234857733857332
 githubRepo: https://github.com/IamGPIO

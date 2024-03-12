@@ -57,7 +57,7 @@ export default defineConfig({
           label: "Bitaxe Accessories",
           items: [
             {
-              label: "Overview",
+              label: "BitHalo",
               link: "/bitaxe/bithalo",
             },
           ],
