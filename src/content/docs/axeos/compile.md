@@ -4,10 +4,15 @@ title: How to Build AxeOS from Source
 # TODO add a guide for MacOS
 # TODO Replace the GIFs with a more zoomed-in screen recording and maybe a better format (webp? webm?)
 ---
+
+:::caution[The versioning of ESP-IDF is important.]
+In order to compile the esp-miner binaries the ESP-IDF 5.1.3 is needed. Not higher not lower.
+:::
 This guide shows you, how you can compile AxeOS yourself. It is split into three sections for the operating systems:
+
 1. 💻 [Windows](#-windows)
-2. 🍏 [MacOS](#-macos) - *this does not exist yet*
-3. 🐧 [Linux](#-linux) - *not finished yet*
+2. 🍏 [MacOS](#-macos) - _this does not exist yet_
+3. 🐧 [Linux](#-linux) - _not finished yet_
 
 ## Requirements
 
@@ -20,7 +25,7 @@ This guide shows you, how you can compile AxeOS yourself. It is split into three
 ### 1. Installation
 
 1. Install the Espressif tool from [here](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/windows-setup.html).
-  On this page, you will find a "Get Started" guide for installing this onto your machine.
+   On this page, you will find a "Get Started" guide for installing this onto your machine.
 2. Install [Visual Studio Code](https://code.visualstudio.com/).
 3. Install the [Espressif IDF Extention](https://marketplace.visualstudio.com/items?itemName=espressif.esp-idf-extension) in VSCode.
 
@@ -39,10 +44,13 @@ In Visual Studio Code go to `View` → `ESP-IDF: Device Configuration` → `Devi
 ### 4. Build
 
 Open an ESP-IDF terminal and cd into the `/main/http_server/axe-os/` folder because we need to build the WebUI first with:
+
 ```bash
 npm run build
 ```
+
 Because the firmware needs to be built from the root directory, cd back to it and then build the firmware with:
+
 ```bash
 idf.py build
 ```
@@ -54,6 +62,7 @@ idf.py build
 This will generate a `build` directory at the root of the project and there you will find the `www.bin`and the `esp-miner.bin` files. These will be uploaded to your Bitaxe.
 
 ## 🍏 MacOS
+
 :::caution[This part of the page is not written yet.]
 Help us to complete the wiki by using the "Edit page" button at the end of the page 👇
 :::
