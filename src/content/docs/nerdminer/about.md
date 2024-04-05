@@ -8,7 +8,7 @@ The main goal of this project is to let you **learn more about minery** and to h
 
 It originates from the [HAN Miner](https://github.com/valerio-vaccaro/HAN).
 
-Nerminer is an implementation of the Stratum protocol for the ESP32 microcontroller to mine on a solo pool. It works by default with [Public Pool](/public-pool/about) (where Nerdminers are supported) but this can be changed.
+Nerdminer is an implementation of the Stratum protocol for the ESP32 microcontroller to mine on a solo pool. It works by default with [Public Pool](/public-pool/about) (where Nerdminers are supported) but this can be changed.
 
 The project was initialy developed using ESP32-S3, but it currently supports other boards aswell. It uses WifiManager to modify miner settings and save them to SPIFF.
 The microMiner comes with several screens to monitor it's working procedure and also to show you network mining stats.
