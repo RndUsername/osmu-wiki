@@ -160,6 +160,10 @@ export default defineConfig({
               label: "BM1397",
               link: "/osmu-lab/bm1397",
             },
+            {
+              label: "BM1366",
+              link: "/osmu-lab/bm1366",
+            },
           ],
         },
         {
