@@ -51,6 +51,10 @@ export default defineConfig({
               label: "400 / Supra",
               link: "/bitaxe/400",
             },
+            {
+              label: "BAP",
+              link: "/bitaxe/bap",
+            },
           ],
         },
         {
