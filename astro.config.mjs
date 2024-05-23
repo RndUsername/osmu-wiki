@@ -55,6 +55,10 @@ export default defineConfig({
               label: "BAP",
               link: "/bitaxe/bap",
             },
+            {
+              label: "AxeTester",
+              link: "/bitaxe/axetester",
+            },
           ],
         },
         {

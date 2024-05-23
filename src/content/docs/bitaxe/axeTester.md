@@ -2,8 +2,10 @@
 title: Bitaxe Tester Board
 logo: ./bitaxe-logo.svg
 discordChannel: https://discord.com/channels/1091348375301013615/1094385604982210633
-githubRepo: https://github.com/skot/bitaxe
+githubRepo: https://github.com/skot/bitaxe/tree/axeTester
 ---
+
+![axeTester](./axeTester.png)
 
 The axeTester is a testing board designed to use the TP's of a Bitaxe and read values from it.
 
