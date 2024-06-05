@@ -52,6 +52,10 @@ export default defineConfig({
               link: "/bitaxe/400",
             },
             {
+              label: "API",
+              link: "/bitaxe/api",
+            },
+            {
               label: "BAP",
               link: "/bitaxe/bap",
             },
