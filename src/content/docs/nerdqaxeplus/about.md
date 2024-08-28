@@ -1,5 +1,5 @@
 ---
-title: About NerdAxe
+title: About NerdQAxePlus
 logo: ./nerdqaxeplus.jpg
 githubRepo: hhttps://github.com/shufps/qaxe/tree/nerdqaxe%2B
 discordChannel: https://discord.com/channels/1274986130990829654
