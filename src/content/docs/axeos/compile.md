@@ -5,9 +5,6 @@ title: How to Build AxeOS from Source
 # TODO Replace the GIFs with a more zoomed-in screen recording and maybe a better format (webp? webm?)
 ---
 
-:::caution[The versioning of ESP-IDF is important.]
-In order to compile the esp-miner binaries the ESP-IDF 5.1.3 is needed. Not higher not lower.
-:::
 This guide shows you, how you can compile AxeOS yourself. It is split into three sections for the operating systems:
 
 1. 💻 [Windows](#-windows)
