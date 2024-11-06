@@ -86,6 +86,10 @@ export default defineConfig({
               link: "/nerdminer/about",
             },
             {
+              label: "NerdNOS",
+              link: "/nerdnos/about",
+            },
+            {
               label: "NerdAxe",
               link: "/nerdaxe/about",
             },
