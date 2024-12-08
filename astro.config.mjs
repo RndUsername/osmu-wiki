@@ -213,6 +213,10 @@ export default defineConfig({
               label: "Assembly",
               link: "/tips/assembly",
             },
+            {
+              label: "FAQ",
+              link: "/tips/faq",
+            },
           ],
         },
       ],
