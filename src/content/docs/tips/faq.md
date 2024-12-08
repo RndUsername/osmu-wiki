@@ -47,6 +47,6 @@ Voltage Regulator: Below 90°C<br>
 <details>
 <summary>Where can I find more information or support?</summary>
 <p>
-  Visit the discord: https://discord.gg/bitaxes
+  Visit the discord: https://discord.gg/osmu
 </p>
 </details>
