@@ -7,21 +7,48 @@ title: FAQ
 Welcome to the Bitaxes FAQ section. Click on a question below to expand and read the answer.
 
 <details>
-<summary>My bitaxe isn't hashing at the expected rate</summary>
-  First fix to always check is to unplug and plug it back in (not just a restart in the UI).
-  The most common cause then is that it overheated.  Make sure you are running at least v2.3 of the firmware and UI to see these warnings.  Go into the UI and check if the frequency and voltage need to be reset to defaults, then save and restart.
-  If you are overclocking, you may need to increase the voltage as not enough voltage for the set frequency can cause it to underperform.
-  Make sure the voltage is in the 4.8-5.2v range.
-  Sometimes you have to redo the firmware update.
+<summary>My Bitaxe isn't hashing at the expected rate</summary>
+<p>
+  If you're experiencing reduced hash rates, try these troubleshooting steps:<br>
+  First, physically disconnect and reconnect the power (don't just restart through the UI)<br>
+  Check for overheating issues - ensure you're running firmware v2.3 or later to see temperature warnings<br>
+  Verify your frequency and voltage settings in the UI under settings - reset to defaults if necessary<br>
+  Confirm the input voltage is between 4.8-5.3v<br>
+  If overclocking, you may need to increase voltage to match your frequency settings<br>
+  As a last resort, try reflashing the firmware
+</p>
 </details>
 
 <details>
-<summary>I want to overclock</summary>
-  Overclocking is not recommended as you can damage components.  If you do overclock though, some things to keep in mind is that you want to keep the ASIC temperature under 70C and on gammas the VR under 90C.
-  Your power adapter will likely need to be upgraded too.  You will know this if your voltage drops under 4.8v then your adapter cannot supply the necessary power for the overclock
+<summary>What should I know about overclocking?</summary>
+<p>
+  Warning: Overclocking can permanently damage your device. If you choose to overclock:<br>
+  Monitor dashboard values carefully, staying within recommended ranges listed below<br>
+  Account for ambient temperature fluctuations by maintaining a safety margin<br>
+  Ensure your power supply is adequate - voltage dropping below 4.8v indicates insufficient power. A higher-rated power supply may be necessary to support increased power demands<br>
+  For best results, upgrade your heatsink and thermal paste before attempting overclocking
+</p>
 </details>
 
 <details>
-<summary>Where can I find more information or support for Bitaxes?</summary>
-  Visit the discord
+<summary>What are the safe operating ranges?</summary>
+<p>
+Input Voltage: 4.8-5.3v<br>
+ASIC Temperature: Below 70°C<br>
+Voltage Regulator: Below 90°C<br>
+</p>
+</details>
+
+<details>
+<summary>Can I use the same update on my Bitaxe, Hex, and TinyChip boards?</summary>
+<p>
+  No, each have their own repositories and updates.
+</p>
+</details>
+
+<details>
+<summary>Where can I find more information or support?</summary>
+<p>
+  Visit the discord: https://discord.gg/bitaxes
+</p>
 </details>
